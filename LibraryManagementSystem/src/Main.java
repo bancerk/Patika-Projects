@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    private static  final Scanner scanner = new Scanner(System.in);
 
-        Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
 
         // Greeter
         System.out.println("Welcome to the Library Management System!");
 
-        // implement do-while loop
         // print main menu after each switch case operation
 
         // Main Menu
@@ -30,18 +30,21 @@ public class Main {
 
         //switch cases upon user input
 
-        switch (mainMenuUserInput){
-            case 1:
-                System.out.print("Enter book title: ");
-                scanner.nextLine();
-                System.out.print("Enter author name: ");
-                scanner.nextLine();
-                System.out.print("Enter ISBN: ");
-                scanner.nextLine();
-                System.out.println("Book added successfully!");
-                break;
-            case 2:
-                System.out.println("All Books:");
+        boolean running = true;
+
+        do {
+            switch (mainMenuUserInput){
+                case 1:
+                    System.out.print("Enter book title: ");
+                    scanner.nextLine();
+                    System.out.print("Enter author name: ");
+                    scanner.nextLine();
+                    System.out.print("Enter ISBN: ");
+                    scanner.nextLine();
+                    System.out.println("Book added successfully!");
+                    break;
+                case 2:
+                    System.out.println("All Books:");
                 /*
                 ----------------------------------
                 Title:
@@ -50,10 +53,10 @@ public class Main {
                 Status: Available
                 ----------------------------------
                  */
-                break;
-            case 3:
-                System.out.print("Enter a book title to search: ");
-                scanner.nextLine();
+                    break;
+                case 3:
+                    System.out.print("Enter a book title to search: ");
+                    scanner.nextLine();
                 /*
                 Found Books:
                 ----------------------------------
@@ -63,26 +66,27 @@ public class Main {
                 Status: Available
                 ----------------------------------
                  */
-                break;
-            case 4:
-                System.out.print("Enter the ISBN of the book you want to check out: ");
-                scanner.nextLine();
-                // implement book available control
-                System.out.println("Book checked out successfully!");
-                System.out.println("Book not found or already checked out.");
-                break;
-            case 5:
-                System.out.print("Enter the ISBN of the book you want to return: ");
-                scanner.nextLine();
-                System.out.println("Book returned successfully!");
-                break;
-            case 6:
-                System.out.println("Exiting Library Management System...");
-                return;
-            default: {
-                System.out.println("Unrecognised Entry! Please try again.");
+                    break;
+                case 4:
+                    System.out.print("Enter the ISBN of the book you want to check out: ");
+                    scanner.nextLine();
+                    // implement book available control
+                    System.out.println("Book checked out successfully!");
+                    System.out.println("Book not found or already checked out.");
+                    break;
+                case 5:
+                    System.out.print("Enter the ISBN of the book you want to return: ");
+                    scanner.nextLine();
+                    System.out.println("Book returned successfully!");
+                    break;
+                case 6:
+                    System.out.println("Exiting Library Management System...");
+                    return;
+                default: {
+                    System.out.println("Unrecognised Entry! Please try again.");
+                }
             }
-        }
+        }while (running);
 
         scanner.close();
     }
