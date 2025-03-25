@@ -1,0 +1,20 @@
+Uygulamanın amacı aşağıdaki konularda öğrencilere Pratik beceri kazandırmaktır.
+
+1.  Sınıflar ve Nesneler: Kod, işlevselliği düzenlemek için sınıflara ayrılabilir (Kitap sınıfı gibi).
+2.  Koleksiyonlar: Kitap nesnelerini depolamak ve yönetmek için koleksiyonlar kullanılabilir (ArrayList gibi).
+3.  Konsol Giriş/Çıkış: Scanner sınıfı kullanıcı girdilerini işlerken, System.out çıktıları yönetir.
+4.  Kontrol Akışı: Uygulamada, menü tabanlı bir arayüz oluşturmak için döngüler ve koşullu ifadeler kullanılabilir.
+5.  Metodlar: Kod, daha iyi okunabilirlik ve yeniden kullanılabilirlik için metodlara ayrılmalıdır.
+
+
+Program console/terminal/siyah ekran üzerinde çalışacaktır ve kullanıcılara şu işlemleri yapma imkanı sağlamalıdır:
+
+1.  Kullanıcı ekranı: Kullanıcı hangi işlemleri yapabileceğini gösteren bir ekran ile karşılanmalıdır.
+2.  Kütüphaneye yeni kitaplar eklemek: Kullanıcı terminal ekranı aracılığı ile kütüphaneye yeni kitaplar ekleyebilmelidir.
+3.  Kütüphanedeki tüm kitapları görüntülemek: Kullanıcı terminal ekranı aracılığı ile kütüphanedeki mevcut kitapları listeleyebilmelidir.
+4.  Başlığa göre kitap aramak: Kullanıcı kitap ismine göre arama yapabilmelidir.
+5.  Kitap ödünç almak: Kullanıcı mevcut bir kitabu ödünç alabilmelidir.
+6.  Kitap daha önceden ödünç alınmış ve henüz iade edilmemişse uyarı verilmelidir. Ödünç alınan kitaplar işaretlenmelidir. Bir kitap bir kez ödünç verilmiş ve henüz geri verilmemişse tekrar ödünç verilemez.
+7.  Kitap iade etmek: Kullanıcı ödünç aldığı bir kitabı iade edebilmelidir.
+8.  Programdan Çıkış: Her işlem sonrası karşılama menüsü tekrar kullanıcıya gösterilmeli ve ancak programdan çıkış seçeneği seçildiğinde programdan çıkılmalıdır.
+
