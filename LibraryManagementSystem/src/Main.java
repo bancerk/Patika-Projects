@@ -13,6 +13,7 @@ public class Main {
         // print main menu after each switch case operation
 
         // Main Menu
+        System.out.println("");
         System.out.println("Please select an option: ");
         System.out.println("1.  Add new book");
         System.out.println("2.  Display all books");
@@ -20,13 +21,11 @@ public class Main {
         System.out.println("4.  Check out a book");
         System.out.println("5.  Return a book");
         System.out.println("6.  Exit");
-
-        int mainMenuUserInput = scanner.nextInt();
-        scanner.nextLine();
-
         System.out.println("");
         System.out.print("Enter your choice: ");
 
+        int mainMenuUserInput = scanner.nextInt();
+        scanner.nextLine();
 
         //switch cases upon user input
 
@@ -81,7 +80,7 @@ public class Main {
                     break;
                 case 6:
                     System.out.println("Exiting Library Management System...");
-                    return;
+                    running = false;
                 default: {
                     System.out.println("Unrecognised Entry! Please try again.");
                 }
