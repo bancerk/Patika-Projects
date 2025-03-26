@@ -70,7 +70,7 @@ public class Main {
 
                 case 6: // Exit
                     System.out.println("");
-                    System.out.println("Exiting Library Management System...");
+                    System.out.println("Thank you for using Library Management System!");
                     running = false;
                     break;
 
