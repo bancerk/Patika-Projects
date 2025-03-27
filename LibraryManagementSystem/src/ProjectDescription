@@ -13,7 +13,7 @@ Program console/terminal/siyah ekran üzerinde çalışacaktır ve kullanıcıla
 2.  Kütüphaneye yeni kitaplar eklemek: Kullanıcı terminal ekranı aracılığı ile kütüphaneye yeni kitaplar ekleyebilmelidir.
 3.  Kütüphanedeki tüm kitapları görüntülemek: Kullanıcı terminal ekranı aracılığı ile kütüphanedeki mevcut kitapları listeleyebilmelidir.
 4.  Başlığa göre kitap aramak: Kullanıcı kitap ismine göre arama yapabilmelidir.
-5.  Kitap ödünç almak: Kullanıcı mevcut bir kitabu ödünç alabilmelidir.
+5.  Kitap ödünç almak: Kullanıcı mevcut bir kitabı ödünç alabilmelidir.
 6.  Kitap daha önceden ödünç alınmış ve henüz iade edilmemişse uyarı verilmelidir. Ödünç alınan kitaplar işaretlenmelidir. Bir kitap bir kez ödünç verilmiş ve henüz geri verilmemişse tekrar ödünç verilemez.
 7.  Kitap iade etmek: Kullanıcı ödünç aldığı bir kitabı iade edebilmelidir.
 8.  Programdan Çıkış: Her işlem sonrası karşılama menüsü tekrar kullanıcıya gösterilmeli ve ancak programdan çıkış seçeneği seçildiğinde programdan çıkılmalıdır.
