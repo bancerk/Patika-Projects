@@ -4,19 +4,13 @@ public class Book {
     private String bookTitle;
     private String author;
     private String isbn;
-    private boolean availabilityStatus;
     private String status;
 
-    public Book(String bookTitle, String author, String isbn, boolean availabilityStatus) {
+    public Book(String bookTitle, String author, String isbn, String status) {
         this.bookTitle = bookTitle;
         this.author = author;
         this.isbn = isbn;
-        this.availabilityStatus = availabilityStatus;
-        if (availabilityStatus){
-            status = "Available";
-        }else {
-            status = "Unavailable";
-        }
+        this.status = status;
     }
 
     public String getBookTitle() {
@@ -31,9 +25,6 @@ public class Book {
         return isbn;
     }
 
-    public boolean isAvailabilityStatus() {
-        return availabilityStatus;
-    }
 
     public void setAuthor(String author) {
         this.author = author;
@@ -47,8 +38,12 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public void setAvailabilityStatus(boolean availabilityStatus) {
-        this.availabilityStatus = availabilityStatus;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override

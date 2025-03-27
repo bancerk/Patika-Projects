@@ -7,7 +7,7 @@ import java.util.List;
 
 public class BookLibraryService {
 
-    private List<Book> Books = new ArrayList<>();
+    public List<Book> Books = new ArrayList<>();
 
     public void searchBookTitle(String userSearchedBookTitle) {
         for (Book book : Books){
@@ -15,6 +15,7 @@ public class BookLibraryService {
                 System.out.println("Found books:");
                 System.out.println("---------------------------");
                 System.out.println(book);
+                return;
             }else {
                 System.out.println("Search yielded no results.");
             }
@@ -28,7 +29,7 @@ public class BookLibraryService {
     }
 
     public void addBook(String bookTitle, String author, String isbn) {
-        Book book = new Book(bookTitle,author,isbn,true);
+        Book book = new Book(bookTitle,author,isbn,"Available");
         Books.add(book);
     }
 }

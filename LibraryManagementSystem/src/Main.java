@@ -1,12 +1,17 @@
 import Service.BookLendingService;
-import Service.BookLibraryService;
 
 import java.util.Scanner;
 
 public class Main {
 
     private static  final Scanner scanner = new Scanner(System.in);
-    private static final BookLibraryService bookLibraryService = new BookLibraryService();
+    // private static final BookLibraryService bookLibraryService = new BookLibraryService();
+    /*
+     Instead of creating two separate objects, use one instance of BookLendingService
+     (since it extends BookLibraryService) for all operations.
+     This way, when you add books, they are available when lending books.
+     And then use bookLendingService.addBook(...) instead of bookLibraryService.addBook(...).
+     */
     private static final BookLendingService bookLendingService = new BookLendingService();
 
 
@@ -34,7 +39,7 @@ public class Main {
                     System.out.print("Enter ISBN: ");
                     String isbn = scanner.nextLine();
 
-                    bookLibraryService.addBook(bookTitle,author,isbn);
+                    bookLendingService.addBook(bookTitle,author,isbn);
                     System.out.println("Book added successfully!");
                     break;
 
@@ -42,23 +47,21 @@ public class Main {
                     System.out.println("");
                     System.out.println("All Books:");
                     System.out.println("---------------------------");
-                    bookLibraryService.printAllBooks();
+                    bookLendingService.printAllBooks();
                     break;
 
                 case 3: // Search for a book by title
                     System.out.println("");
                     System.out.print("Enter a book title to search: ");
                     String userSearchedBookTitle = scanner.nextLine();
-                    bookLibraryService.searchBookTitle(userSearchedBookTitle);
+                    bookLendingService.searchBookTitle(userSearchedBookTitle);
                     break;
 
                 case 4: // Check out a book
                     System.out.println("");
                     System.out.print("Enter the ISBN of the book you want to check out: ");
-                    scanner.nextLine();
-                    // implement book available control
-                    System.out.println("Book checked out successfully!");
-                    System.out.println("Book not found or already checked out.");
+                    String userSearchedBookIsbn = scanner.nextLine();
+                    bookLendingService.lendBook(userSearchedBookIsbn);
                     break;
 
                 case 5: // Return a book
