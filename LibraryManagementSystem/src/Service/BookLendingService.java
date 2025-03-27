@@ -8,7 +8,7 @@ public class BookLendingService extends BookLibraryService {
 
     public void lendBook(String userSearchedBookIsbn) {
         for (Book book : Books){
-            if (book.getIsbn().equals(userSearchedBookIsbn)){
+            if (book.getIsbn().equals(userSearchedBookIsbn) && book.getStatus().equals("Available")){
                 book.setStatus("Unavailable");
                 System.out.println("Book checked out successfully!");
                 bookFoundIsbnSearch =  true;
