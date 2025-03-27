@@ -9,16 +9,20 @@ public class BookLibraryService {
 
     public List<Book> Books = new ArrayList<>();
 
+    boolean bookFoundTitleSearch = false;
+
     public void searchBookTitle(String userSearchedBookTitle) {
         for (Book book : Books){
             if (book.getBookTitle().equals(userSearchedBookTitle)){
                 System.out.println("Found books:");
                 System.out.println("---------------------------");
                 System.out.println(book);
-                return;
-            }else {
-                System.out.println("Search yielded no results.");
+                bookFoundTitleSearch = true;
+                break;
             }
+        }
+        if (!bookFoundTitleSearch){
+            System.out.println("Search yielded no results.");
         }
     }
 

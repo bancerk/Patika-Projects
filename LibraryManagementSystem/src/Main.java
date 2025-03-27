@@ -67,8 +67,8 @@ public class Main {
                 case 5: // Return a book
                     System.out.println("");
                     System.out.print("Enter the ISBN of the book you want to return: ");
-                    scanner.nextLine();
-                    System.out.println("Book returned successfully!");
+                    String userReturnBookIsbn = scanner.nextLine();
+                    bookLendingService.returnBook(userReturnBookIsbn);
                     break;
 
                 case 6: // Exit
